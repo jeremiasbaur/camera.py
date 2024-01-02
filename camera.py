@@ -209,7 +209,7 @@ class Camera:
             - [17.74182159488]
 
         """
-        data = yaml.load(open(filename))
+        data = yaml.safe_load(open(filename))
         if 'id' in data:
             self.id = data['id']
         if 'K' in data:
